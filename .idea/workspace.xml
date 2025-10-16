@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b690a106-e498-4605-aad7-66434fa0ddc4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/prasad.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/auth/model/user.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/auth/profile/profile.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/auth/routers/authentication.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/auth/schemas/otp_verify.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/auth/schemas/user.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/auth/user_management/user_management.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/db/db.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/drone_details/model/drone_details.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/drone_details/routers/drone_details.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/drone_details/schemas/drone_details.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/equipment_details/model/equipement_services.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/equipment_details/routers/equipement_services.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/equipment_details/schemas/equipement_services.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/experience_record/model/experience_record.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/experience_record/routers/experience_record.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/experience_record/schemas/experience_record.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/industry/model/industry.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/industry/router/industry.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/industry/schemas/industry.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/license/model/license.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/license/router/license.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/license/schemas/license.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/services/drone_services/model/drone_service.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/services/drone_services/router/drone_services.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/services/drone_services/schemas/drone_services.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/user/customer/model/customer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/user/customer/router/customer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/user/customer/schemas/customer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/user/operator/model/operator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/user/operator/router/operator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/user/operator/schemas/operator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/utils/email_config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/utils/get_hashed_password.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/utils/otp_generate.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/utils/token_generation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/utils/user_info.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="Dockerfile" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="343M0Zisg1A08vqECe9EW7Li3RP" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/fast api/prasad&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\fast api\prasad\app\industry_and_sub_industry\schemas" />
+      <recent name="D:\fast api\prasad\app\industry_and_sub_industry\router" />
+      <recent name="D:\fast api\prasad\app\experience_record\schemas" />
+      <recent name="D:\fast api\prasad\app\experience_record\routers" />
+      <recent name="D:\fast api\prasad\app\license\router" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\fast api\prasad\app" />
+      <recent name="D:\fast api\prasad\app\drone_details\routers" />
+      <recent name="D:\fast api\prasad\app\services" />
+      <recent name="D:\fast api\prasad\app\auth" />
+      <recent name="D:\fast api\prasad\app\profile" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-7e47963ff851-f0eec537fc84-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.23892.515" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b690a106-e498-4605-aad7-66434fa0ddc4" name="Changes" comment="" />
+      <created>1760437579369</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1760437579369</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/utils/token_generation.py</url>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
