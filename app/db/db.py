@@ -12,13 +12,13 @@ from app.user.customer.model.customer import CustomerInfoModel, CustomerDetailsI
 from app.user.operator.model.operator import OperatorInfoModel
 import os
 
-# MONGO_DETAILS = "mongodb://localhost:27017/prasad"
+
 
 # Load .env file (only for local)
 load_dotenv()
 
 # Use env variable for MongoDB
-MONGO_DETAILS = os.getenv("MONGO_URI", "mongodb://localhost:27017/prasad")
+MONGO_DETAILS = os.getenv("MONGO_URI")
 
 async def init_db():
     client: AsyncIOMotorClient = AsyncIOMotorClient(MONGO_DETAILS)
