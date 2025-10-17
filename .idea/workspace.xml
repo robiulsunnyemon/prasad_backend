@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b690a106-e498-4605-aad7-66434fa0ddc4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/auth/user_management/customer_management/customer_management.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/auth/user_management/operator_management/operator_management.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/auth/user_management/user_management.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/auth/user_management/user_management.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/db/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/db/db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Dockerfile" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>

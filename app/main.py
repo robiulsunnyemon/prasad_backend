@@ -11,9 +11,29 @@ from app.license.router.license import router as license_router
 from app.experience_record.routers.experience_record import router as experience_record_router
 from app.services.drone_services.router.drone_services import router as drone_services_router
 from app.industry.router.industry import router as industry_router
+from fastapi.middleware.cors import CORSMiddleware
+from app.auth.user_management.customer_management.customer_management import router as customer_user_router
+from app.auth.user_management.operator_management.operator_management import router as operator_user_router
+
 
 app = FastAPI()
 
+
+
+origins = [
+    "http://localhost",
+    "http://localhost:8000",
+    "https://prasad.mtscorporate.com",
+    "*"
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.on_event("startup")
 async def startup():
@@ -41,3 +61,5 @@ app.include_router(license_router)
 app.include_router(experience_record_router)
 app.include_router(drone_services_router)
 app.include_router(industry_router)
+app.include_router(customer_user_router)
+app.include_router(operator_user_router)
