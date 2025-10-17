@@ -4,6 +4,8 @@ from typing import List
 from app.auth.model.user import UserModel
 from app.auth.schemas.otp_verify import UserOTPVerify
 from app.auth.schemas.user import UserCreate,UserResponse
+from app.user.customer.model.customer import CustomerInfoModel
+from app.user.operator.model.operator import OperatorInfoModel
 from app.utils.get_hashed_password import get_hashed_password,verify_password
 from app.utils.otp_generate import generate_otp
 from app.utils.email_config import send_otp, SendOtpModel
@@ -83,6 +85,57 @@ async def login(form_data: OAuth2PasswordRequestForm = Depends()):
     token = create_access_token(data={"sub": db_user.email, "role": db_user.role, "user_id": db_user.id})
     return {"access_token": token, "token_type": "bearer"}
 
+
+
+@router.post("/beta-version/login", status_code=status.HTTP_200_OK)
+async def not_recommended_to_login(form_data: OAuth2PasswordRequestForm = Depends()):
+    db_user = await UserModel.find_one(UserModel.email == form_data.username)
+
+    if db_user is None:
+        db_customer = await CustomerInfoModel.find_one(CustomerInfoModel.phone == form_data.username)
+        db_operator = await OperatorInfoModel.find_one(OperatorInfoModel.phone_number == form_data.username)
+
+        related_user = None
+        if db_customer:
+            related_user = await db_customer.user_id.fetch()
+        elif db_operator:
+            related_user = await db_operator.user_id.fetch()
+
+        if related_user:
+            db_user = await UserModel.find_one(UserModel.id == related_user.id)
+        else:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="User not found"
+            )
+
+
+    if not verify_password(form_data.password, db_user.password):
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Wrong password"
+        )
+
+
+    if db_user.otp_status != "verified":
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Your account is not active or has expired"
+        )
+
+
+    if db_user.account_status != "active":
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="You are not verified, please wait for admin approval or contact your administrator"
+        )
+
+
+    token = create_access_token(
+        data={"sub": db_user.email, "role": db_user.role, "user_id": str(db_user.id)}
+    )
+
+    return {"access_token": token, "token_type": "bearer"}
 
 
 

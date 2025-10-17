@@ -4,7 +4,6 @@ from app.auth.schemas.user import UserResponse
 from app.utils.user_info import get_user_info
 from app.drone_details.schemas.drone_details import DroneDetailsCreate,DroneDetailsResponse
 from app.drone_details.model.drone_details import DroneDetailsModel
-from typing import List
 
 
 router = APIRouter(prefix="/drone_details", tags=["Drone Details"])
