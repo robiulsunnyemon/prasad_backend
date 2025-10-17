@@ -1,3 +1,4 @@
+from typing import Optional
 from pydantic import BaseModel, EmailStr, field_validator
 from datetime import datetime
 
@@ -22,3 +23,9 @@ class UserResponse(BaseModel):
     model_config = {
         "from_attributes": True
     }
+
+
+class UserUpdate(BaseModel):
+    email: Optional[EmailStr] = None
+    password: Optional[str] = None
+    role: Optional[str] = None

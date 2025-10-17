@@ -1,10 +1,7 @@
 from fastapi import APIRouter, HTTPException,status
 from typing import List
 from app.auth.model.user import UserModel
-from app.auth.schemas.user import UserResponse
-
-
-
+from app.auth.schemas.user import UserResponse, UserUpdate
 
 router = APIRouter(
     prefix="/user",
@@ -59,3 +56,18 @@ async def get_user_by_id(user_id:str):
     if db_user is None :
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,detail="User not found")
     return db_user
+
+@router.patch("/{user_id}",response_model=UserResponse,status_code=status.HTTP_200_OK)
+async def get_user_by_id(user_id:str,user_info:UserUpdate):
+    db_user= await UserModel.find_one(UserModel.id==user_id)
+    if db_user is None :
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,detail="User not found")
+
+    update_info=user_info.model_dump(exclude_unset=True)
+    if not update_info:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,detail="No fields to update")
+
+    await db_user.set(update_info)
+
+    return db_user
+
