@@ -22,8 +22,8 @@ async def read_users():
 
 
 
-@router.post("/suspend/${user_id}", status_code=status.HTTP_200_OK)
-async def suspend_account(user_id:str):
+@router.post("/do_suspend/${user_id}", status_code=status.HTTP_200_OK)
+async def do_suspend_account(user_id:str):
     db_user = await UserModel.get(user_id)
     if db_user is None :
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,detail="User not found")
@@ -37,8 +37,8 @@ async def suspend_account(user_id:str):
 
 
 
-@router.post("/active/${user_id}", status_code=status.HTTP_200_OK)
-async def active_account(user_id:str):
+@router.post("/do_active/${user_id}", status_code=status.HTTP_200_OK)
+async def do_active_account(user_id:str):
     db_user = await UserModel.get(user_id)
     if db_user is None :
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,detail="User not found")
@@ -54,7 +54,7 @@ async def active_account(user_id:str):
 
 
 @router.get("/{user_id}",response_model=UserResponse,status_code=status.HTTP_200_OK)
-async def get_users_by_id(user_id:str):
+async def get_user_by_id(user_id:str):
     db_user= await UserModel.find_one(UserModel.id==user_id)
     if db_user is None :
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,detail="User not found")
