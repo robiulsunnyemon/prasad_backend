@@ -105,7 +105,7 @@ async def not_recommended_to_login(form_data: OAuth2PasswordRequestForm = Depend
             db_user = await UserModel.find_one(UserModel.id == related_user.id)
         else:
             raise HTTPException(
-                status_code=status.HTTP_404_NOT_FOUND,
+                status_code=status.HTTP_401_UNAUTHORIZED,
                 detail="User not found"
             )
 
