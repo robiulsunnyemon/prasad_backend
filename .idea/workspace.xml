@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b690a106-e498-4605-aad7-66434fa0ddc4" name="Changes" comment="" />
+    <list default="true" id="b690a106-e498-4605-aad7-66434fa0ddc4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/order/drone_services_order/model/drone_services_order.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/order/drone_services_order/router/drone_services_order.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/order/drone_services_order/schemas/drone_services_order.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/db/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/db/db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/drone_services/model/drone_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/drone_services/model/drone_service.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,11 +56,11 @@
       <recent name="D:\fast api\prasad\app\license\router" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\fast api\prasad\app\order\drone_services_order\model" />
       <recent name="D:\fast api\prasad\app" />
       <recent name="D:\fast api\prasad\app\drone_details\routers" />
       <recent name="D:\fast api\prasad\app\services" />
       <recent name="D:\fast api\prasad\app\auth" />
-      <recent name="D:\fast api\prasad\app\profile" />
     </key>
   </component>
   <component name="SharedIndexes">

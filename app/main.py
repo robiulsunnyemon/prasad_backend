@@ -14,7 +14,7 @@ from app.industry.router.industry import router as industry_router
 from fastapi.middleware.cors import CORSMiddleware
 from app.auth.user_management.customer_management.customer_management import router as customer_user_router
 from app.auth.user_management.operator_management.operator_management import router as operator_user_router
-
+from app.order.drone_services_order.router.drone_services_order import router as drone_services_order_router
 
 app = FastAPI()
 
@@ -63,3 +63,4 @@ app.include_router(drone_services_router)
 app.include_router(industry_router)
 app.include_router(customer_user_router)
 app.include_router(operator_user_router)
+app.include_router(drone_services_order_router)

@@ -7,6 +7,7 @@ from app.equipment_details.model.equipement_services import EquipmentHistoryMode
 from app.experience_record.model.experience_record import OperatorRecordModel
 from app.industry.model.industry import SubIndustryModel, IndustryModel
 from app.license.model.license import OperatorLicenseModel
+from app.order.drone_services_order.model.drone_services_order import DroneServiceOrderModel
 from app.services.drone_services.model.drone_service import DroneServiceModel
 from app.user.customer.model.customer import CustomerInfoModel, CustomerDetailsInfoModel, CustomerServicesDetailsModel
 from app.user.operator.model.operator import OperatorInfoModel
@@ -39,6 +40,7 @@ async def init_db():
             DroneServiceModel,
             IndustryModel,
             SubIndustryModel,
+            DroneServiceOrderModel
         ],
     )
 
@@ -46,5 +48,5 @@ async def init_db():
 async def drop_user_collection():
     client: AsyncIOMotorClient = AsyncIOMotorClient(MONGO_DETAILS)
     database: AsyncIOMotorDatabase = client.get_database()
-    await database.drop_collection("operator_info")
-    await database.drop_collection("customer_info")
+    await database.drop_collection("drone_service_order")
+
