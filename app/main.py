@@ -16,7 +16,11 @@ from app.auth.user_management.customer_management.customer_management import rou
 from app.auth.user_management.operator_management.operator_management import router as operator_user_router
 from app.order.drone_services_order.router.drone_services_order import router as drone_services_order_router
 
-app = FastAPI()
+app = FastAPI(
+    title="Prasad",
+    version="1.0",
+    description="Prasad",
+)
 
 
 
